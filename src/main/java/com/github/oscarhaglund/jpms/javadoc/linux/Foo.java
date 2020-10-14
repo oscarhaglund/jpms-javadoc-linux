@@ -4,6 +4,8 @@
  */
 package com.github.oscarhaglund.jpms.javadoc.linux;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Test class for seeing if javadoc can be generated in JMPS setting on linux
@@ -11,6 +13,9 @@ package com.github.oscarhaglund.jpms.javadoc.linux;
  *
  */
 public class Foo {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Foo.class);
+	
 	private String foo;
 	private String bar;
 	
@@ -40,6 +45,7 @@ public class Foo {
 	 */
 	public void setBar(String bar) {
 		this.bar = bar;
+		LOGGER.debug("set bar to {}", bar);
 	}
 	
 	
